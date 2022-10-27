@@ -6,6 +6,7 @@ import Register from '../screens/Register';
 import Home from '../screens/Home';
 import AuthLoading from '../screens/AuthLoading';
 import TabNavigator from './TabNavigator';
+import FoodItem from '../screens/FoodItem';
 
 const Stack = createNativeStackNavigator()
 
@@ -17,6 +18,7 @@ const StackNavigator = () => {
             <Stack.Screen name="Login" component={Login}/>
             <Stack.Screen name="Register" component={Register}/>
             <Stack.Screen name="Home" component={TabNavigator}/>
+            <Stack.Screen name="Food" component={FoodItem}/>
         </Stack.Navigator>
     )
 }

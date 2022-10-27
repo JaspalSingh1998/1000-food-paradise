@@ -17,6 +17,11 @@ const TabNavigator = () => {
           return <Ionicons name="home-outline" size={size} color={color} />;
         }
       }}/>
+      <Tab.Screen name="Cart" component={Home} options={{
+        tabBarIcon: ({color, size}) => {
+          return <Ionicons name="cart" size={size} color={color} />;
+        }
+      }}/>
       <Tab.Screen name="Profile" component={Profile} options={{
         tabBarIcon: ({color, size}) => {
           return <Ionicons name="person-outline" size={size} color={color}/>
