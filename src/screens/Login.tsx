@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
-import { Text, SafeAreaView } from 'react-native'
+import { Text, StyleSheet, Alert } from 'react-native'
 import { loginUser } from '../api/auth-api'
 import BackButton from '../components/BackButton'
 import Background from '../components/Background'
 import Button from '../components/Button'
 import Header from '../components/Header'
+import Paragraph from '../components/Paragraph'
 import TextInput from '../components/TextInput'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
@@ -36,10 +37,15 @@ const Login = ({navigation}) => {
         setLoading(false)
    } 
 
+   const handleClick = () => {
+    navigation.navigate('Register')
+   }
+
   return (
     <Background>
         <BackButton goBack={navigation.goBack}/>
-        <Header>Welcome</Header>
+        <Header>Login</Header>
+        <Paragraph>Welcome to Food Paradise. Your heaven to keep your tummy happy :)</Paragraph>
         <TextInput
             value={email.value} 
             description=""
@@ -52,9 +58,20 @@ const Login = ({navigation}) => {
         onChangeText={(text) => {
             setPassword({ value: text, error: '' })
         }} placeholder="Password" secureTextEntry/>
-        <Button loading={loading} onPress={onLoginPressed}>Login</Button>
+        <Button loading={loading} onPress={onLoginPressed} mode='custom'>Login</Button>
+        <Text style={styles.lead}>No account yet? <Text style={styles.accent} onPress={handleClick}>Register here</Text></Text>
     </Background>
   )
 }
+
+const styles = StyleSheet.create({
+    lead: {
+        fontSize: 12,
+        marginTop: 42
+    },
+    accent: {
+        color: '#F9A417'
+    }
+})
 
 export default Login
