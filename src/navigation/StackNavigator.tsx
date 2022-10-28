@@ -7,6 +7,7 @@ import Home from '../screens/Home';
 import AuthLoading from '../screens/AuthLoading';
 import TabNavigator from './TabNavigator';
 import FoodItem from '../screens/FoodItem';
+import Checkout from '../screens/Checkout';
 
 const Stack = createNativeStackNavigator()
 
@@ -19,6 +20,7 @@ const StackNavigator = () => {
             <Stack.Screen name="Register" component={Register}/>
             <Stack.Screen name="Home" component={TabNavigator}/>
             <Stack.Screen name="Food" component={FoodItem}/>
+            <Stack.Screen name="Checkout" component={Checkout}/>
         </Stack.Navigator>
     )
 }

@@ -6,7 +6,7 @@ import Btn from '../components/Button'
 const Cart = ({navigation}) => {
 
   const goToCheckout = () => {
-    navigation.navigate('Profile')
+    navigation.navigate('Checkout')
   }
 
   return (
