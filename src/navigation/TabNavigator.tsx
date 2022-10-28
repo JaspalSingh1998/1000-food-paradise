@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from '../screens/Home';
 import Profile from '../screens/Profile';
+import Cart from '../screens/Cart';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,7 +18,7 @@ const TabNavigator = () => {
           return <Ionicons name="home-outline" size={size} color={color} />;
         }
       }}/>
-      <Tab.Screen name="Cart" component={Home} options={{
+      <Tab.Screen name="Cart" component={Cart} options={{
         tabBarIcon: ({color, size}) => {
           return <Ionicons name="cart" size={size} color={color} />;
         }
