@@ -1,8 +1,9 @@
 import React from 'react'
 import { View, Text, Image, SafeAreaView, StyleSheet } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Button from '../components/Button';
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -48,6 +49,9 @@ const Profile = () => {
           <Ionicons style={styles.icon} name="close-circle-outline" size={20} />
           <Text style={{fontSize: 18}}>Remove Account</Text>
         </View>
+      </View>
+      <View style={{paddingHorizontal: 20}}>
+        <Button mode='custom' onPress={() => navigation.navigate('Start')}>Logout</Button>
       </View>
     </SafeAreaView>
   )

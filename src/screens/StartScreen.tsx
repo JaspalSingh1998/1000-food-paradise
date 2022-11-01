@@ -1,18 +1,20 @@
 import React from 'react'
-import { Text, View, StyleSheet, Button } from 'react-native'
+import { Text, View, StyleSheet} from 'react-native'
+import Button from '../components/Button'
 
 const StartScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <Text>StartScreen</Text>
-        <Button title='Login' onPress={() => navigation.navigate('Login')}/>
-        <Button title='Register' onPress={() => navigation.navigate('Register')}/>
+        <Text>Welcome To Food Paradise</Text>
+        <Button mode='custom' onPress={() => navigation.navigate('Login')}>Login</Button>
+        <Button mode='custom' onPress={() => navigation.navigate('Register')}>Register</Button>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
     container: {
+        paddingHorizontal: 30,
         flex: 1,
         backgroundColor: "#fff",
         alignItems: 'center',
