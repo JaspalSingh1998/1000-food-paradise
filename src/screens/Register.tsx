@@ -59,7 +59,7 @@ const Register = ({navigation}) => {
             onChangeText={(text) => {
                 setName({ value: text, error: '' })
             }} 
-            label="Email"/>
+            label="Name"/>
         <TextInput
             value={email.value} 
             description=""
