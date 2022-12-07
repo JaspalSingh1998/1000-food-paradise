@@ -4,12 +4,12 @@
     "slug": "1000-food-paradise",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/foodparadise.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/food_paradise_logo.png",
+      "image": "./assets/foodparadise.png",
       "resizeMode": "contain",
-      "backgroundColor": "#1E1E1E"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,8 +22,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/foodparadise.png",
+        "backgroundColor": "#000000"
       }
     },
     "web": {
